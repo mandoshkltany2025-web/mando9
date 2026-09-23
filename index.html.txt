@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html manifest="mando9.cache">
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>mando9 - الهوست الشامل لتعديل PS4</title>
+
+<style>
+
+body {
+
+background-color: #0d0e15;
+
+color: #ffffff;
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+text-align: center;
+
+direction: rtl;
+
+padding: 20px 10px;
+
+background-image: linear-gradient(135deg, #131524 0%, #0d0e15 100%);
+
+}
+.banner-img {
+
+width: 100%;
+max-width: 300px;
+height: auto;
+border-radius: 15px;
+border: 3px solid #00f0ff;
+box-shadow: 0 0 15px #00f0ff;
+margin-bottom: 15px;
+}
+h1 { 
+font-size: 28px; 
+margin: 5px 0; 
+color: #00f0ff;
+text-shadow: 0 0 10px #00f0ff;
+
+font-weight: bold;
+
+}
+
+.subtitle { 
+
+font-size: 16px; 
+
+color: #ff007f; 
+
+font-weight: bold;
+
+margin-bottom: 20px;
+
+text-shadow: 0 0 5px #ff007f;
+
+}
+
+.section-title {
+
+font-size: 14px;
+
+color: #94a3b8;
+
+margin: 15px 0 8px 0;
+
+text-align: right;
+
+border-bottom: 1px solid #334155;
+
+padding-bottom: 5px;
+
+}
+.btn-grid {
+
+display: grid;
+
+grid-template-columns: 1fr 1fr;
+
+gap: 12px;
+
+margin-bottom: 15px;
+
+}
+
+.btn {
+
+background: linear-gradient(45deg, #1e293b, #334155);
+
+color: #fff;
+
+padding: 14px;
+
+font-size: 15px;
+
+font-weight: bold;
+
+border-radius: 12px;
+
+border: 1px solid #475569;
+
+cursor: pointer;
+
+transition: 0.2s all ease;
+
+}
+
+.btn.primary {
+
+background: linear-gradient(45deg, #ff007f, #7928ca);
+
+border: none;
+
+box-shadow: 0 4px 10px rgba(255, 0, 127, 0.3);
+
+}
+
+.btn:hover, .btn:focus {
+
+transform: scale(1.03);
+
+border-color: #00f0ff;
+
+box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+
+outline: none;
+
+}
+
+#status { 
+
+margin-top: 20px; 
+
+font-size: 14px; 
+
+color: #00ffcc; 
+
+font-weight: bold;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<img src="mando.png" alt="mando9 - صيانة وتعديل" class="banner-img">
+
+<h1>mando9 Host</h1> 
+
+<div class="subtitle">صيانة وتعديل PS4 (إصدارات التعديل الشاملة)</div>
+
+<div class="section-title">تعديل الـ WebKit المستقر (بإدخال الفلاشة)</div>
+
+<div class="btn-grid">
+
+<button class="btn primary" onclick="loadExploit('900')">سوفت 9.00 (الذهبي)</button>
+
+<button class="btn" onclick="loadExploit('960')">سوفت 9.60</button>
+
+</div>
+
+<div class="section-title">تعديلات السوفت وير الحديثة والجديدة</div>
+
+<div class="btn-grid">
+
+<button class="btn" onclick="loadExploit('1100')">سوفت 11.00</button>
+
+<button class="btn" onclick="loadExploit('1252')">سوفت 12.52</button>
+
+<button class="btn" onclick="loadExploit('1300')">سوفت 13.00</button>
+
+<button class="btn primary" onclick="loadExploit('1352')">سوفت 13.52 (الأحدث)</button>
+
+</div>
+
+<div id="status">جاهز لتنشيط التعديل لزبائن المحل</div>
+
+</div>
+
+<script>
+
+function loadExploit(fw) {
+
+var statusBox = document.getElementById("status");
+
+statusBox.innerHTML = "mando9: جاري فتح ملفات اختراق سوفت " + fw + "...";
+
+setTimeout(function() {
+
+if(fw === '900') { location.href = "fw900/index.html"; } 
+
+else { location.href = "fw" + fw + "/index.html"; }
+
+}, 1200);
+
+}
+
+if (window.applicationCache) {
+
+window.applicationCache.ondownloading = function() {
+document.getElementById("status").innerHTML = "mando9: جاري تخزين كاش السوفتات الشامل (0%)..."; };
+window.applicationCache.onprogress = function(e) {
+document.getElementById("status").innerHTML = "جاري حفظ الصور والملفات
+أوفلاين... " + Math.round((e.loaded/e.total)*100) + "%"; };
+window.applicationCache.oncached = function() {
+document.getElementById("status").innerHTML = "mando9: تم حفظ الهوست
+الشامل بنجاح! جاهز للعمل بدون إنترنت."; };
+}
+
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
