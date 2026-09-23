@@ -1,0 +1,18 @@
+CACHE MANIFEST
+
+
+# v1.0 Mando «·‘«„·
+
+
+CACHE:
+
+
+index.html
+
+
+mando.png
+
+
+
+NETWORK:
+*
